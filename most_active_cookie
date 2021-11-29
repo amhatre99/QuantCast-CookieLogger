@@ -1,0 +1,14 @@
+#!/bin/bash
+
+date=''
+verbose='false'
+
+if [ $# -ne 3 ]; then
+   exit 2;
+fi
+
+if [ "$2" != "-d" ]; then
+  exit 1;
+fi
+
+python3 ./most_active_cookie.py $1 $2 $3
